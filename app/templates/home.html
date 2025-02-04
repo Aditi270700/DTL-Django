@@ -1,0 +1,40 @@
+<h1>This is my homepage</h1>
+{{data}}
+<br/>
+{% for i in data %}
+<h2>{{i}}</h2>
+<br/>
+{% endfor %}
+<br/>
+<br/>
+<br/>
+{% for i in data %}
+    Name:{{i.stu_name}}
+    Email:{{i.stu_email}}
+    Contact:{{i.stu_contact}}
+    City:{{i.stu_city}}
+    <br/>
+{% endfor %}
+
+<br/>
+
+<table border='2'>
+<tr>
+<th>Student Name</th>
+<th>Student Email</th>
+<th>Student Contact</th>
+<th>Student City</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+{% for i in data %}
+<tr>
+<td>{{i.stu_name}}</td>
+<td>{{i.stu_email}}</td>
+<td>{{i.stu_contact}}</td>
+<td>{{i.stu_city}}</td>
+<td><a href="">Edit</a></td>
+<td><a href="">Delete</a></td>
+</tr>
+{% endfor %}
+</table>
