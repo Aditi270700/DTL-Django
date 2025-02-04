@@ -5,4 +5,4 @@ from .models import Student
 def home(request):
     stu = Student.objects.all()
     print(stu)
-    return render(request, 'home.html',{'data':stu.values()})
+    return render(request, 'home.html',{'data1':stu.values(),'data2':"kuch nhi"})
