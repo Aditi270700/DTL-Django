@@ -51,4 +51,18 @@
 <br/>
 <br/>
 {% with value=10 %}
-{{value|}}
+{{value|add:5}}
+{% endwith %}
+<br/>
+{% with name="django" %}
+{{name|capfirst}}
+{% endwith %}
+<br/>
+{% with name="django" %}
+"{{name|center:"15"}}"
+{% endwith %}
+<br/>
+
+{% with user="" %}
+welcome{{user|default:"Guest"}}
+{% endwith %}
