@@ -1,4 +1,5 @@
-<h1>This is my homepage</h1>
+
+{% comment %} <h1>This is my homepage</h1>
 {% if data %}
 {{data}}
 <br/>
@@ -65,4 +66,28 @@
 
 {% with user="" %}
 welcome{{user|default:"Guest"}}
-{% endwith %}
+{% endwith %} {% endcomment %}
+
+
+<table border='2'>
+<tr>
+<th>S.No</th>
+<th>Student Name</th>
+<th>Student Email</th>
+<th>Student Contact</th>
+<th>Student City</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+{% for i in data %}
+<tr>
+<td>{{forloop.counter}}</td>
+<td>{{i.stu_name}}</td>
+<td>{{i.stu_email}}</td>
+<td>{{i.stu_contact}}</td>
+<td>{{i.stu_city}}</td>
+<td><a href="">Edit</a></td>
+<td><a href="{% url 'delete' pk=i.id %}">Delete</a></td>
+</tr>
+{% endfor %}
+</table>
