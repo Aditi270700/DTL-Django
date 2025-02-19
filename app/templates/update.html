@@ -1,0 +1,13 @@
+{% comment %} hii aditi
+  {% if data1 %} 
+<h3>Update Table</h3>
+<form action="{% url 'submit' pk=data1.id %}" method="post">
+   {% csrf_token %}
+   <input type="text" name="name" value="{{data1.stu_name}}"><br>
+   <input type="email" name="email" value="{{data1.stu_email}}" readonly><br>
+   <input type="number" name="contact" value="{{data1.stu_contact}}"><br>
+   <input type="text" name="city" value="{{data1.stu_city}}"><br>
+   <input type="submit" value="Submit">
+</form>
+
+  {% endif %}   {% endcomment %}

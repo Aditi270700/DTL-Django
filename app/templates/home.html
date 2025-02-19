@@ -92,9 +92,9 @@ welcome{{user|default:"Guest"}}
 {% endfor %}
 </table>
 
-{% if data1 %}
+  {% if data1 %}
 <h3>Update Table</h3>
-<form action="{% url 'updatedat' pk=data1.id %}" method="post">
+<form action="{% url 'update' pk=data1.id %}" method="post">
    {% csrf_token %}
    <input type="text" name="name" value="{{data1.stu_name}}"><br>
    <input type="email" name="email" value="{{data1.stu_email}}" readonly><br>
@@ -103,4 +103,4 @@ welcome{{user|default:"Guest"}}
    <input type="submit" value="Update">
 </form>
 
-{% endif %}
+{% endif %} 

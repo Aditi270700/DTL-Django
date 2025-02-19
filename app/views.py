@@ -19,7 +19,7 @@ def edit(request,pk):
     stu=Student.objects.all()
     return render(request, 'home.html',{'data':stu,'data1':data})
 
-def updatedat(request,pk):
+def update(request,pk):
     if request.method=="POST":
         x = Student.objects.get(id=pk)
         p = request.POST.get('name')
@@ -33,3 +33,4 @@ def updatedat(request,pk):
         x.save()
         stu=Student.objects.all()
         return render(request, 'home.html',{'data':stu})
+
